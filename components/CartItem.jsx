@@ -5,8 +5,8 @@ const CartItem = ({ item, removeFromCart, updateQuantity }) => {
     <div className="cart-item">
       <img src={item.image} alt={item.name} />
       <h4>{item.name}</h4>
-      <p className="price">Price: ${item.price}</p>
-      <p className="quantity">
+      <p>Price: ${item.price}</p>
+      <p>
         Quantity:
         <input
           type="number"

@@ -2,7 +2,6 @@ import React, { useState, createContext } from "react";
 import ProductList from "../components/ProductList";
 import Cart from "../components/Cart";
 import Search from "../components/Search";
-import NavBar from "../components/NavBar";
 import "./App.css";
 
 const productsData = [
@@ -72,7 +71,10 @@ const App = () => {
   return (
     <CartContext.Provider value={{ addToCart, removeFromCart, updateQuantity }}>
       <div className="App">
-        <NavBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        <header className="header">
+          <h1>Shopping Site</h1>
+          <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        </header>
         <main>
           <ProductList products={filteredProducts} addToCart={addToCart} />
           <Cart
